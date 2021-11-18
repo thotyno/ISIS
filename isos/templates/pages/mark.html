@@ -1,0 +1,24 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Coi điểm{% endblock  %}
+{% load static %}
+{% block content %}
+<style>
+    .mouse {
+        text-align: center;
+        font-size: 30px;
+        margin: 0 auto;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        top: 3%;
+        border: 2px solid white; /* Viền */
+        position: absolute; /* Ưu tiên */
+        right: 5%; /* Cách trái */ 
+    }
+    
+    </style>
+    <iframe class='position-static' src="https://tracuu.vnedu.vn/so-lien-lac/" width="100%" height="100%">
+    </iframe>
+    <button class='bth btn-danger mouse' onclick='window.location.href="/personal"'>X</button>
+{% endblock %}

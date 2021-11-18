@@ -1,0 +1,26 @@
+{% extends "pages/base.html" %}
+
+{% block title %}ISOS{% endblock  %}
+{% load static %}
+{% block content %}
+<div class="row justify-content-center border-bottom">
+    <div class="col-xs-4 col-xl-4 align-self-center">
+        {% if user.username %}
+            <label>Xin chào, {{user.username}}</label>
+            <p><a href="{% url 'logout' %}">Đăng xuất</a></p>
+        {% else %}
+        <p><a href="{% url 'login' %}">Đăng nhập</a></p>
+        {% endif %}
+    </div>
+</div> </br>
+
+<h1 class="text-ceter">GÓP Ý - BÁO LỖI</h1> 
+<form action="/action_page.php">
+    <div class="form-group">
+        <label for="comment">Nội dung:</label>
+        <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+        <button type="submit" class="btn btn-primary mt-2">Gửi</button>
+    </div>
+</form>
+<button class="btn btn-danger mt-2 ml-2" onclick='window.location.href="/"'>Thoát</button>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Home Love{% endblock  %}
+{% load static %}
+{% block content %}
+    <div class="row">
+    <div class="col-3 mt-5 border rounded">
+        
+        </div>
+    <div class="col-6 mt-5 ">
+        <h1 class="header">Home Love</h1>
+        <a  class="header" href="/dashboard/subpage/example_variable_parameter_from_url">Subpage with parameter</a>
+    </div>
+    <div class="col-3 mt-5 ">
+        
+        <div class='border rounded' id='cs'>
+        <div class='ml-2 mt-2'>
+            <img src="{% static 'icons/cs.svg' %}" class='float-left mr-1' width="15px" height="15px">
+            <a style="color: #3d85c6;text-decoration: none" href='/cs'>Clound Schools<a>
+        </div>
+
+        <div class='ml-2 mt-2' id='wj'>
+            <img src="{% static 'icons/wj.svg' %}" class='float-left mr-1' width="15px" height="15px">
+            <a style="color: #ff9900;text-decoration: none" href='/wj'>Wang Jack<a>
+        </div>
+
+        <div class='ml-2 mt-2' id='nap'>
+            <img src="{% static 'icons/nap.svg' %}" class='float-left mr-1' width="15px" height="15px">
+            <a style="color: #5b794e;text-decoration: none" href='/nap'>Nap<a>
+        </div>
+
+        <div class='ml-2 mt-2' id='lbr'>
+            <img src="{% static 'icons/library.svg' %}" class='float-left mr-1' width="15px" height="15px">
+            <a style="color: #bf9000;text-decoration: none" href='/lbr'>Nhà sách<a>
+        </div>
+
+        <div class='ml-2 mt-2' id='lbr'>
+            <img src="{% static 'icons/languages.svg' %}" class='float-left mr-1' width="15px" height="15px">
+            <a style="color: #741b47;text-decoration: none" href='/lal'>Learn a language<a>
+        </div>
+
+        <div class='ml-2 mt-2' id='hl'>
+            <img src="{% static 'icons/il.svg' %}" class='float-left mr-1' width="15px" height="15px">
+            <a style="color: #741b47;text-decoration: none" href='/hl'>Home Love<a>
+        </div>
+
+        <div class='ml-2 mt-2' id='fileslive'>
+            <img src="{% static 'icons/fileslive.svg' %}" class='float-left mr-1' width="15px" height="15px">
+            <a style="color: #999999;text-decoration: none" href='/fl'>Files Live<a>
+        </div>
+
+        <div class='ml-2 mt-2' id='noteslive'>
+            <img src="{% static 'icons/noteslive.svg' %}" class='float-left mr-1' width="15px" height="15px">
+            <a style="color: #ffff00;text-decoration: none" href='/nl'>Note Live<a>
+        </div>
+
+        <div class='ml-2 mt-2' id='muvic'>
+            <img src="{% static 'icons/muvic.svg' %}" class='float-left mr-1' width="15px" height="15px">
+            <a style="color: #ff0000;text-decoration: none" href='/muvic'>Muvic<a>
+        </div>
+
+        </div>
+
+        <div class='border rounded mt-2' id='gopy'>
+            <div class='ml-2 mt-2 '>
+                <img src="{% static 'icons/gopy.svg' %}" class='float-left mr-1' width="15px" height="15px">
+                <a style="color: #000000;text-decoration: none" href='/contact'>Góp ý<a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

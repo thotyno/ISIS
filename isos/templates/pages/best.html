@@ -1,0 +1,70 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Home Love{% endblock  %}
+{% load static %}
+{% block content %}
+<div class="card-deck text-center">
+    <div class="card">
+      <div class="card-body" onclick="window.location.href='/best/toanhoc'">
+        <img class="card-img-top" src="{% static 'icons/wj/maths.svg' %}" width="64px" height="64px"> <br> <br>
+        <h4 class="card-title">TOÁN HỌC</h4>
+        <p class="card-text">Công thức, bài tập.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body" onclick="window.location.href='/best/vatly'">
+        <img class="card-img-top" src="{% static 'icons/wj/physical.svg' %}" width="64px" height="64px"> <br> <br>
+        <h4 class="card-title">VẬT LÝ</h4>
+        <p class="card-text">Công thức, bài tập.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body" onclick="window.location.href='/best/hoahoc'">
+        <img class="card-img-top" src="{% static 'icons/wj/chemistry.svg' %}" width="64px" height="64px"> <br> <br>
+        <h4 class="card-title">HÓA HỌC</h4>
+        <p class="card-text">Công thức, bài tập.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body" onclick="window.location.href='/best/english'">
+        <img class="card-img-top" src="{% static 'icons/wj/english.svg' %}" width="64px" height="64px"> <br> <br>
+        <h4 class="card-title">TIẾNG ANH</h4>
+        <p class="card-text">Công thức, bài tập.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body" onclick="window.location.href='/best/sinhhoc'">
+        <img class="card-img-top" src="{% static 'icons/wj/biological.svg' %}" width="64px" height="64px"> <br> <br>
+        <h4 class="card-title">SINH HỌC</h4>
+        <p class="card-text">Công thức, bài tập.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body" onclick="window.location.href='/best/dialy'">
+        <img class="card-img-top" src="{% static 'icons/wj/geography.svg' %}" width="64px" height="64px"> <br> <br>
+        <h4 class="card-title">ĐỊA LÝ</h4>
+        <p class="card-text">Công thức, bài tập.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body" onclick="window.location.href='/best/gdcd'">
+        <img class="card-img-top" src="{% static 'icons/wj/people.svg' %}" width="64px" height="64px"> <br> <br>
+        <h4 class="card-title">GDCD</h4>
+        <p class="card-text">Công thức, bài tập.</p>
+      </div>
+    </div>
+  </div>
+
+
+<button>CHẤT HÓA HỌC</button>
+<button>PHƯƠNG TRÌNH</button>
+<button>KHÁI NIỆM CƠ BẢN</button>
+<div class="dropdown">
+<button onclick="dropdown_start()" class="bthdropd">VIDEO</button>
+<div id='mydropdown' class='dropdown-content'>
+    <a href="">Chất kết tủa</a> 
+    <a href="">Chất bai hơi</a> 
+    <a href="">Khác</a> 
+</div>
+</div>
+{% endblock %}

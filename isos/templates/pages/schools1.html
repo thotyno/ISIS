@@ -1,0 +1,82 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Thông tin trường học{% endblock  %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">
+      <a href="/"><img src="{% static 'favicon/isos.ico' %}" alt=""></a> |
+      <img src="{% static 'favicon/cs.ico' %}" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+
+
+    <div class="form-inline my-2 my-lg-0 ">
+      {% if user.first_name %}
+          <p>{{user.first_name}}</p>
+          <p><a href="{% url 'logout' %}">| Đăng xuất</a></p>
+      {% else %}
+          <p><a href="{% url 'login' %}">Đăng nhập</a></p>
+      {% endif %}
+    </div>
+  </div>
+</nav>    
+
+
+<!-- nền -->
+<div class='row justify-content-center'>
+    <div class='col-md-4 border'>
+        <img src="{% static 'imgs/ltp-bn.jpg' %}" alt="" height="312px" width="820px" > <br>
+    </div>
+</div>
+<div class='row align-items-center justify-content-center'>
+    <div class='border col-md-7'>
+        <img src="{% static 'imgs/ltp-av.jpg' %}" alt="" height="150px" width="150px" class='d-inline'> 
+        <h1 class='d-inline'>Trường THPT Lưu Tấn Phát</h1>
+    </div>
+</div>
+
+<!-- thân -->
+<div class='text-center border'>
+<div>
+    <button class="btn">LỊCH SỬ NHÀ TRƯỜNG</button>
+    <button class="btn">THỜI KHÓA BIỂU</button>
+    <button class="btn" data-toggle="modal" data-target="#exampleModal">THÔNG BÁO</button>
+    <button class="btn">ẢNH</button>
+    <button class="btn">THI TUYỂN</button>
+    <button class="btn"><img src="{% static 'icons/menu.png' %}" alt=""></button>
+</div>
+
+</div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thông báo.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="alert alert-success" role="alert">
+                Ngày 07/01/2020 | Học sinh Thi Khoa Học Kĩ Thuật
+            </div>
+            <div class="alert alert-secondary" role="alert">
+                Ngày 04-05/1/2020 | Cắm trại 
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

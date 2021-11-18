@@ -1,0 +1,101 @@
+{% extends "pages/base.html" %}
+
+{% block title %}ISOS{% endblock  %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">
+        <a href="/"><img src="{% static 'favicon/isos.ico' %}" alt=""></a> |
+        <img src="{% static 'favicon/wj.ico' %}" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+
+
+      <div class="form-inline my-2 my-lg-0 ">
+        {% if user.first_name %}
+            <p>{{user.first_name}}</p>
+            <p><a href="{% url 'logout' %}">| Đăng xuất</a></p>
+        {% else %}
+            <p><a href="{% url 'login' %}">Đăng nhập</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+<!--  -->
+<div class="row justify-content-center">
+        <div class='col-xs-4 col-md-4 text-center align-self-center'>
+            <ul class='list-group'>
+                <li class="list-group-item active">CHUNG</li>
+                <a class="list-group-item" href="wj/top" style='text-decoration: none;' >BẢNG XẾP HẠNG</a>
+            </ul>
+        </div>
+</div>
+<div class="row justify-content-center">
+        <div class='col-xs-4 col-md-4 text-center align-self-center'>
+            <ul class='list-group'>
+                <li class="list-group-item active">THỂ LOẠI</li>
+                <li class="list-group-item">TRẮC NGHIỆM</li>
+                <li class="list-group-item">GIÁO ÁN</li>
+                <li class="list-group-item">BÀI GIẢNG</li>
+                <li class="list-group-item">ĐỀ THI</li>
+                <li class="list-group-item">ĐỀ KIỂM TRA</li>
+                <li class="list-group-item">VĂN MẪU</li>
+                <li class="list-group-item">ĐƠN - BẢN MẪU</li>
+                <li class="list-group-item">MẸO HAY</li>
+                <li class="list-group-item">CÂU ĐỐ</li>
+                <li class="list-group-item">GÓC HỌC TẬP</li>
+                <li class="list-group-item">KĨ NĂNG SỐNG</li>
+            </ul>
+        </div>
+</div>
+<div class="row justify-content-center">
+        <div class='col-xs-4 col-md-4 text-center align-self-center'>
+            <ul class='list-group'>
+            <li class="list-group-item active">KHỐI TỰ NHIÊN</li>
+                <li class="list-group-item">TOÁN</li>
+                <li class="list-group-item">LÝ</li>
+                <li class="list-group-item">HÓA</li>
+            </ul>
+        </div>
+</div>
+<div class="row justify-content-center">
+        <div class='col-xs-4 col-md-4 text-center align-self-center'>
+            <li class="list-group-item active">KHỐI XÃ HỘI</li>
+                <li class="list-group-item">GDCD</li>
+                <li class="list-group-item">LỊCH SỬ</li>
+                <li class="list-group-item">ĐỊA</li>
+        </div>
+</div>
+<div class="row justify-content-center">
+        <div class='col-xs-4 col-md-4 text-center align-self-center'>
+            <li class="list-group-item active">CỘNG ĐỒNG</li>
+                <li class="list-group-item">TOÁN HỌC</li>
+                <li class="list-group-item">HÓA HỌC</li>
+                <li class="list-group-item">VẬT LÝ</li>
+                <li class="list-group-item">ANH VĂN</li>
+        </div>
+</div>
+<div class="row justify-content-center">
+        <div class='col-xs-4 col-md-4 text-center align-self-center'>
+            <li class="list-group-item active">GIẢI TRÍ</li>
+            <li class="list-group-item">Anime & Manga</li>
+            <li class="list-group-item">Phim</li>
+            <li class="list-group-item">Liên Minh Huyền Thoại</li>
+            <li class="list-group-item">Liên Quân Mobie</li>
+            <li class="list-group-item">Fire Fine</li>
+            <li class="list-group-item">PUPG</li>
+        </div>
+</div>
+<div class="row justify-content-center">
+        <div class='col-xs-4 col-md-4 text-center align-self-center'>
+            <li class="list-group-item active">KHU VỰC CẤM</li>
+                <li class="list-group-item">Thùng rác</li>
+        </div>
+    </div>
+{% endblock %}

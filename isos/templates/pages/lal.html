@@ -1,0 +1,66 @@
+{% extends "pages/base.html" %}
+
+{% block title %}LAL{% endblock  %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" style='color: #741b47;'>LAL</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">TRANG CHỦ <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">TỪ ĐIỂN</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">TIẾNG ANH SANG TIẾNG VIỆT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">TỪ CỦA BẠN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">TỪ ĐÃ TRA</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class='row'>
+    <div class="col-3 mt-5 border rounded">
+    <h1 class='text-center'>Thể loại:</h1>
+    <ol>
+        <li>Tư duy - Kỹ năng sống</li>
+        <li>Kiến thức - Bách khoa</li>
+        <li>Bookmark</li>
+        <li>Kỹ năng làm việc</li>
+        <li>Sách học tiếng anh</li>
+        <li>Sách nghệ thuật sống đẹp</li>
+        <li>Kể cho bé</li>
+        <li>Tiểu thuyết lảng mạng</li>
+        <li>Marketing - Bán hàng</li>
+        <li>Bài học kinh doanh</li>
+        <li>Tuyện ngắn - Tản văn - Tạp văn</li>
+        <li>Truyện trinh thiếu nhi</li>
+        <li>Học tiếng Hàn</li>
+        <li>Hướng nghiệp - Kỹ năng mềm</li>
+        <li>Đạo đức - Kỹ năng sống</li>
+        <li>Luật - Văn Bản Luật</li>
+        <li>Anime</li>
+    </ol>
+    </div>
+</div>
+
+
+<!-- item sách -->
+<div>
+    Ngày sản xuất: <br>
+    Tác giả: <br>
+    Mã số: <br>
+    <button><a href="" style='text-decoration: none'>XEM SÁCH</a></button>
+    <button><a href="" style='text-decoration: none;'>Theo dõi sách</a></button>
+</div>
+{% endblock %}

@@ -1,0 +1,125 @@
+
+{% extends "pages/base.html" %}
+
+{% block title %}THỜI KHÓA BIỂU LỚP{% endblock  %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">
+        <a href="/"><img src="{% static 'favicon/isos.ico' %}" alt=""></a> |
+        <img src="{% static 'favicon/cs.ico' %}" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+
+
+      <div class="form-inline my-2 my-lg-0 ">
+        {% if user.first_name %}
+            <p>{{user.first_name}}</p>
+            <p><a href="{% url 'logout' %}">| Đăng xuất</a></p>
+        {% else %}
+            <p><a href="{% url 'login' %}">Đăng nhập</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </nav>    
+
+<table class='table table-bordered text-center'>
+    <tr>
+        <th>TIẾT \ THỨ</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+    </tr>
+    <tr>
+        <th rowspan="5">SÁNG</th>
+        <th>Môn tiết 1</th>
+        <th>Môn tiết 1</th>
+        <th>Môn tiết 1</th>
+        <th>Môn tiết 1</th>
+        <th>Môn tiết 1</th>
+        <th>Môn tiết 1</th>
+    </tr>
+    <tr>
+        <th>Môn tiết 2</th>
+        <th>Môn tiết 2</th>
+        <th>Môn tiết 2</th>
+        <th>Môn tiết 2</th>
+        <th>Môn tiết 2</th>
+        <th>Môn tiết 2</th>
+    </tr>
+    <tr>
+        <th>Môn tiết 3</th>
+        <th>Môn tiết 3</th>
+        <th>Môn tiết 3</th>
+        <th>Môn tiết 3</th>
+        <th>Môn tiết 3</th>
+        <th>Môn tiết 3</th>
+    </tr>
+    <tr>
+        <th>Môn tiết 4</th>
+        <th>Môn tiết 4</th>
+        <th>Môn tiết 4</th>
+        <th>Môn tiết 4</th>
+        <th>Môn tiết 4</th>
+        <th>Môn tiết 4</th>
+    </tr>
+    <tr>
+        <th>Môn tiết 5</th>
+        <th>Môn tiết 5</th>
+        <th>Môn tiết 5</th>
+        <th>Môn tiết 5</th>
+        <th>Môn tiết 5</th>
+        <th>Môn tiết 5</th>
+    </tr>
+    <tr>
+        <th rowspan="5">CHIỀU</th>
+        <th>Môn tiết 1</th>
+        <th>Môn tiết 1</th>
+        <th>Môn tiết 1</th>
+        <th>Môn tiết 1</th>
+        <th>Môn tiết 1</th>
+        <th>Môn tiết 1</th>
+    </tr>
+    <tr>
+        <th>Môn tiết 2</th>
+        <th>Môn tiết 2</th>
+        <th>Môn tiết 2</th>
+        <th>Môn tiết 2</th>
+        <th>Môn tiết 2</th>
+        <th>Môn tiết 2</th>
+    </tr>
+    <tr>
+        <th>Môn tiết 3</th>
+        <th>Môn tiết 3</th>
+        <th>Môn tiết 3</th>
+        <th>Môn tiết 3</th>
+        <th>Môn tiết 3</th>
+        <th>Môn tiết 3</th>
+    </tr>
+    <tr>
+        <th>Môn tiết 4</th>
+        <th>Môn tiết 4</th>
+        <th>Môn tiết 4</th>
+        <th>Môn tiết 4</th>
+        <th>Môn tiết 4</th>
+        <th>Môn tiết 4</th>
+    </tr>
+    <tr>
+        <th>Môn tiết 5</th>
+        <th>Môn tiết 5</th>
+        <th>Môn tiết 5</th>
+        <th>Môn tiết 5</th>
+        <th>Môn tiết 5</th>
+        <th>Môn tiết 5</th>
+    </tr>
+</table>
+{% endblock %}

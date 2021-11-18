@@ -1,0 +1,30 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Đăng nhập{% endblock  %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class='content-section'>
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class='form-group'>
+            <legend class='border-bottom mb-4'>Đăng nhập</legend>
+            {{ form|crispy }} 
+        </fieldset>
+        <div class='form-group'>
+            <button class='btn btn-outline-info' type="submit">Đăng nhập</button>
+        </div>
+    </form>
+</div>
+
+<!-- 
+
+        {% for key.value in form.errors.items %}
+            {{value}}
+        {% endfor %}
+        <p><label>Tài khoảng:</label>{{form.username}}</p>
+        <p><label>Mật khẩu:</label>{{form.password}}</p>
+        <input type="hidden" name="next" value="/"/>
+        <input type="submit" value="Đăng nhập"/>
+    </form> -->
+{% endblock content %}

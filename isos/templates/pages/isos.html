@@ -1,0 +1,144 @@
+{% extends "pages/base.html" %}
+
+{% block ico %}cs{% endblock %}
+{% block title %}ISOS{% endblock  %}
+{% load static %}
+{% block content %}
+<link rel="shortcut icon" type="image/png" href="{% static 'favicon/isos.ico' %}"/>
+<div class="row justify-content-center border-bottom">
+    <div class="col-xs-4 col-xl-4 align-self-center">
+        {% if user.first_name %}
+            <label>Xin chào, {{user.first_name}}</label>
+            <p><a href="{% url 'logout' %}">Đăng xuất</a></p>
+        {% else %}
+        <p><a href="{% url 'login' %}">Đăng nhập</a></p>
+        {% endif %}
+    </div>
+</div> </br>
+
+<div class="row justify-content-center">
+    <div class="col-xs-4 col-xl-4 align-self-center">
+        <button class='btn btn-large btn-block btn-outline-primary' onclick="window.location.href='cs'">
+            <h1>Cloud Schools</h1>
+            <p>Hệ thống trường học phục vụ cho nhà trường, giáo viên, học sinh và phụ huynh.</p>
+        </button>
+    </div>
+</div> </br>
+<div class="row justify-content-center">
+    <div class="col-xs-4 col-xl-4">
+        <button class='btn btn-large btn-block btn-outline-info' onclick="window.location.href='wj'">
+            <h1>Wang Jack</h1>
+            <p>Nơi học sinh đăng bài biết về khó khăn trong học tập, chia sẻ những tâm tư của mình.</p>
+        </button>
+    </div>
+</div> </br>
+
+<div class="row justify-content-center">
+    <div class="col-xs-4 col-xl-4">
+        <button class='btn btn-large btn-block btn-outline-success' onclick="window.location.href='nap'">
+            <h1>NAP</h1>
+            <p>Ví điện tử.</p>
+        </button>
+    </div>
+</div> </br>
+
+<div class="row justify-content-center">
+    <div class="col-xs-4 col-xl-4">
+        <button class='btn btn-large btn-block btn-outline-warning' onclick="window.location.href='lbr'">
+            <h1>Library</h1>
+            <p>Hệ thống thư viện online, hiện đại, giải quyết công tác quản lý thư viện,… </p>
+        </button>
+    </div>
+</div> </br>
+
+<div class="row justify-content-center">
+    <div class="col-xs-4 col-xl-4">
+        <button class='btn btn-large btn-block btn-outline-danger' onclick="window.location.href='lh'">
+            <h1>Love Home</h1>
+            <p>Nơi học sinh gửi thông tin cho nhà trường về học sinh có hoàn cảnh khó khăn trong trường. </p>
+        </button>
+    </div>
+</div> </br>
+
+<div class="row justify-content-center">
+    <div class="col-xs-4 col-xl-4">
+        <button class='btn btn-large btn-block btn-outline-dark' onclick="window.location.href='settings'">
+            <h1>Cài đặt</h1>
+            <p>Coi và chỉnh sữa thông tin. </p>
+        </button>
+    </div>
+</div> </br>
+
+<div class="row justify-content-center">
+    <div class="col-xs-4 col-xl-4">
+        <button class='btn btn-large btn-block btn-outline-dark' data-toggle="modal" data-target="#myModal">
+            <h1>FAQ</h1>
+            <p>Các câu hỏi thường gặp, hướng dẫn.</p>
+        </button>
+    </div>
+</div> </br>
+
+
+
+<div class="row justify-content-center">
+    <div class="col-xs-4 col-xl-4">
+        <button class='btn btn-large btn-block btn-outline-secondary' data-toggle="modal" data-target="#contact">
+            <h1>GÓP Ý</h1>
+            <p>Nơi góp ý và thông tin liên hệ</p>
+        </button>
+    </div>
+  </div>
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">FAQ</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="contact">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">GÓP Ý - BÁO LỖI</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <form action="/action_page.php">
+            <div class="form-group">
+                <label for="comment">Nội dung:</label>
+                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                <button type="submit" class="btn btn-primary mt-2 col-4">Gửi</button>
+            </div>
+        </form>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+{% endblock %}

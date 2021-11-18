@@ -1,0 +1,64 @@
+            <p>Ngân hàng tri thức. Hệ thống câu hỏi, thi thử, thi kiến thức giáo dục.</p>
+
+       <h1><a href="wj/best">CHUYÊN MÔN</a></h1>
+            <h2>HÓA HỌC</h2>
+            <h2>VĂN HỌC</h2>
+                <h3>TÁC GIẢ</h3>
+                <h3>NHÀ THƠ</h3>
+            <h2>TIN HỌC</h2>
+                <h3>PASCAL</h3>
+                    <h4>BÀI TẬP</h4>
+            <h2>LỊCH SỬ</h2>
+                <h3>NHÀ BÁC HỌC</h3>
+    </div>
+    <button onclick="window.location.href='wj/thi-thu'">THI THỬ</button>
+    <button onclick="window.location.href='wj/thi'">THI</button>
+
+    <div class='container-fluid'>
+            <div align='leght'>
+                <a href="/">CS</a>
+            </div>
+        </div>
+
+<div>
+    <h1>KHU VỰC ĐIỀU HÀNH</h1>
+    <h2>Thông báo</h2>
+    <h2>Hướng dẫn sử dụng</h2>
+    <h2>Thắc mắc góp ý</h2>
+</div>
+
+<div>
+    <h1>KHU VỰC CẤM</h1>
+    <h2>Thùng rác</h2>
+</div>
+
+<!-- #1 -->
+
+<h1 class="text-center">BÀI KIỂM TRA</h1>
+        <div class='row'>
+            <div class="col">
+                <strong>Trường:</strong> <br>
+                <strong>Họ và tên:</strong> <br>
+                <strong>Lớp:</strong> <br>
+                <strong>Môn:</strong> <br>
+            </div>
+            <div class='col'>
+                <strong>Thời gian còn lại:</strong> <br>
+                <strong>Mã đề:</strong>
+            </div>
+        </div>
+
+<!-- 2 -->
+    </div>
+
+    <div class="col-3 mt-5 ">
+    </div>
+
+</div>
+
+    <!--  -->
+    <div class="col-xs-12 col-md-6 border align-self-center">
+        <div class='text-center'>
+            <h1 style="color: #17a2b8;">Wang Jack</h1>
+        </div>
+    </div>

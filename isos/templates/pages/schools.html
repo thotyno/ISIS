@@ -1,0 +1,91 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Thông tin trường học{% endblock  %}
+{% load static %}
+{% block content %}
+<div align='center'>
+    <input type="text">
+    <button type="submit">Tìm</button>
+</div>
+<div>
+    <section>
+        <option value="">Tiền Giang</option>
+    </section>
+</div>
+
+<div>
+    <a href="">Lịch sử nhà trường</a>
+    <a href="">Nội qui - Quy định</a>
+</div>
+
+<div class='text-center'>
+    <h1>THỜI GIAN RA VÀO HỌC</h1> <br>  
+    <table class='table table-bordered'>
+        <h2>BUỔI SÁNG</h2>
+        <tr>
+            <th>TIẾT</th>
+            <th>VÀO</th>
+            <th>RA</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>7:00:00</th>
+            <th>7:45:00</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>7:45:00</th>
+            <th>8:30:00</th>
+        </tr>
+        <tr>
+            <th>3</th>
+            <th>8:50:00</th>
+            <th>9:35:00</th>
+        </tr>
+        <tr>
+            <th>4</th>
+            <th>9:40:00</th>
+            <th>10:25:00</th>
+        </tr>
+        <tr>
+            <th>5</th>
+            <th>10:30:00</th>
+            <th>11:15:00</th>
+        </tr>
+    </table>
+    <table class='table table-bordered'>
+        <h2>BUỔI CHIỀU</h2>
+        <tr>
+            <th>TIẾT</th>
+            <th>VÀO</th>
+            <th>RA</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>12:15:00</th>
+            <th>13:00:00</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>13:05:00</th>
+            <th>13:50:00</th>
+        </tr>
+        <tr>
+            <th>3</th>
+            <th>13:55:00</th>
+            <th>14:40:00</th>
+        </tr>
+        <tr>
+            <th>4</th>
+            <th>15:00:00</th>
+            <th>15:45:00</th>
+        </tr>
+        <tr>
+            <th>5</th>
+            <th>15:45:00</th>
+            <th>16:30:00</th>
+        </tr>
+    </table>
+    Ghi chú: Giờ ra chơi 20 phút. <br> + Buổi sáng: 8:30:00 đến 8:50:00 <br> + Buổi chiều 14:40:00 đến 15:00:00
+</div>
+{% endblock %}

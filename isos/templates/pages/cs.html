@@ -1,0 +1,87 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Cloud Schools{% endblock  %}
+{% block background %}E1E5EB{% endblock %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">
+        <a href="/"><img src="{% static 'favicon/isos.ico' %}" alt=""></a> |
+        <img src="{% static 'favicon/cs.ico' %}" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+
+
+      <div class="form-inline my-2 my-lg-0 ">
+        {% if user.first_name %}
+            <a href="/personal.html"><p>{{user.first_name}}</p></a>
+            <p><a href="{% url 'logout' %}">| Đăng xuất</a></p>
+        {% else %}
+            <p><a href="{% url 'login' %}">Đăng nhập</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </nav>    
+
+
+<div class="row">
+    <div class="col-xs-12 col-md-6">
+        <ul class="list-group">
+            <span class="list-group-item active" onclick="window.location.href='#truonghoc'" id="truonghoc">TRƯỜNG HỌC</span>
+            <button class="list-group-item" onclick="window.location.href='schools/1'">THÔNG TIN</button>
+            <!-- <button class="list-group-item" onclick="window.location.href='map'">PHÒNG HỌC</button> -->
+            <button class="list-group-item" >PHÒNG HỌC</button>
+            <button class="list-group-item" onclick="window.location.href='cs/teacher'">GIÁO VIÊN</button>
+            <button class="list-group-item" onclick="window.location.href='cs/tncs'">ĐOÀN TRƯỜNG</button>
+            <button class="list-group-item" onclick="window.location.href='clb'">CÂU LẠC BỘ</button>
+            <button class="list-group-item" data-toggle="modal" data-target="#exampleModal">TIN TỨC - THÔNG BÁO</button>
+            <button class="list-group-item" onclick="window.location.href='cs/tkb/all'">THỜI KHÓA BIỂU TỔNG</button>
+            <button onclick="window.location.href='/mark'" class="list-group-item" hidden>COI ĐIỂM</button>
+        </ul> <br>
+    </div>
+<div class="col-xs-12 col-md-6">
+    <ul class="list-group">
+        <span class="list-group-item active" onclick="window.location.href='#lophoc'" id="lophoc">LỚP HỌC</span>
+        <!-- <button class="list-group-item" onclick="window.location.href='cs/class/map'">SƠ ĐỒ LỚP</button> -->
+        <button class="list-group-item">SƠ ĐỒ LỚP</button>
+        <button class="list-group-item" onclick="window.location.href='cs/class/lq'">CÂU HỎI BÀI HỌC</button>
+        <button class="list-group-item" onclick="window.location.href='cs/class/bill'">ĐÓNG TIỀN</button>
+        <button class="list-group-item" onclick="window.location.href='class'">THÔNG TIN</button>
+        <button class="list-group-item" onclick="window.location.href='cs/class/chat'">TRÒ CHUYỆN</button>
+        <button class="list-group-item" onclick="window.location.href='cs/tkb/class'">THỜI KHÓA BIỂU</button>
+        <button class="list-group-item" onclick="window.location.href='cs/class/mem'">THÀNH VIÊN</button>
+        <button class="list-group-item" onclick="window.location.href='cs/sdb'">SỔ ĐẦU BÀI</button>
+        <button class="list-group-item" onclick="window.location.href='/class/thongbao'">THÔNG BÁO - HOẠT ĐỘNG</button>
+    </ul> <br>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thông báo.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="alert alert-success" role="alert">
+                Ngày 07/01/2020 | Học sinh Thi Khoa Học Kĩ Thuật
+            </div>
+            <div class="alert alert-secondary" role="alert">
+                Ngày 04-05/1/2020 | Cắm trại 
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+{% endblock %}

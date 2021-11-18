@@ -1,0 +1,30 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Lbr{% endblock  %}
+{% load static %}
+{% block content %}
+<div class='text-center mt-5'> <h1>Đăng nhập bằng...</h1>
+
+    <div class='row justify-content-center'>
+        <div routerLink='/isos' class="border col-sm-12 col-md-12 col-lg-4 mt-2 ml-2 mr-2" >
+            <img src="{% static 'icons/login/user.svg' %}" width="120px" height="120px" class='mt-3'> <br> 
+            <a class='mt-2' href="/login/log_in">TÀI KHOẢN</a>
+        </div>
+    
+        <div routerLink='/isos' class="border col-sm-12 col-md-12 col-lg-4 mt-2 ml-2 mr-2">
+            <img src="{% static 'icons/login/qr-code.svg' %}" width="120px" height="120px" class='mt-3'> <br> 
+            <a class='mt-2' href="/login/log_in">MÃ QR</a>
+        </div>
+    
+        <div routerLink='/isos' class="border col-sm-12 col-md-12 col-lg-4 mt-2 ml-2 mr-2">
+            <img src="{% static 'icons/login/fb.svg' %}" width="120px" height="120px" class='mt-3'> <br> 
+            <a class='mt-2' href="/login/log_in">Facbook</a>
+        </div>
+    
+        <div routerLink='/isos' class="border col-sm-12 col-md-12 col-lg-4 mt-2 ml-2 mr-2">
+            <img src="{% static 'icons/login/gg.svg' %}" width="120px" height="120px" class='mt-3'> <br> 
+            <a class='mt-2' href="/login/log_in">Google</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

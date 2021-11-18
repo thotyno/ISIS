@@ -1,0 +1,14 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Đăng xuất{% endblock  %}
+{% load static %}
+{% block content %}
+<div class='content-section'>
+    <h2>Đăng xuất thành công.</h2>
+    <div class='border-top pt-3'>
+        <small class='text-muted'>
+            <a href="{% url 'login' %}" style="text-decoration: none;">Đăng nhập lại. </a>
+        </small>
+    </div>
+</div>
+{% endblock content %}

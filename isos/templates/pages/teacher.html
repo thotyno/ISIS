@@ -1,0 +1,37 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Giáo viên{% endblock  %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">
+        <a href="/"><img src="{% static 'favicon/isos.ico' %}" alt=""></a> |
+        <img src="{% static 'favicon/cs.ico' %}" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+
+
+      <div class="form-inline my-2 my-lg-0 ">
+        {% if user.first_name %}
+            <p>{{user.first_name}}</p>
+            <p><a href="{% url 'logout' %}">| Đăng xuất</a></p>
+        {% else %}
+            <p><a href="{% url 'login' %}">Đăng nhập</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </nav>    
+
+<div align='center'>
+    <form action=""></form>
+        <input type="text" placeholder="Tên GV hoặc ID GV">
+        <button type="submit">Tìm</button>
+    </form>
+</div>
+{% endblock %}

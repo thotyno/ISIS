@@ -1,0 +1,71 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Wang Jack Top{% endblock  %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">
+        <img src="{% static 'favicon/wj.ico' %}" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="/wj">Home <span class="sr-only">(current)</span></a>
+          </li>
+      </ul>
+
+
+      <div class="form-inline my-2 my-lg-0 ">
+          <a href="/"><img src="{% static 'favicon/isos.ico' %}" alt=""></a>
+        {% if user.first_name %}
+            <p>{{user.first_name}}</p>
+            <p><a href="{% url 'logout' %}">| Đăng xuất</a></p>
+        {% else %}
+            <p><a href="{% url 'login' %}">Đăng nhập</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+<div class='row'>
+    
+    <div class='col-3 mt-2 ' >
+        <div class="list-group text-center" >
+            <span class="list-group-item active">HAY GIÚP ĐỠ:</span>
+            <span class="list-group-item">HẠNG 1:</span>
+            <span class="list-group-item">HẠNG 2:</span>
+            <span class="list-group-item">HẠNG 3:</span>
+        </div>
+    </div>
+
+    <div class='col-3 mt-2' >
+        <div class="list-group text-center" >
+            <span class="list-group-item active">SỐ THÀNH VIÊN:</span>
+            <span class="list-group-item">HẠNG 1:</span>
+            <span class="list-group-item">HẠNG 2:</span>
+            <span class="list-group-item">HẠNG 3:</span>
+        </div>
+    </div>
+    
+    <div class='col-3 mt-2' >
+        <div class="list-group text-center" >
+            <span class="list-group-item active">TRỰC TUYẾN NHIỀU NHẤT:</span>
+            <span class="list-group-item">HẠNG 1:</span>
+            <span class="list-group-item">HẠNG 2:</span>
+            <span class="list-group-item">HẠNG 3:</span>
+        </div>
+    </div>
+
+    <div class='col-3 mt-2' >
+        <div class="list-group text-center" >
+            <span class="list-group-item active">MƯỢN SÁCH THƯ VIỆN:</span>
+            <span class="list-group-item">HẠNG 1:</span>
+            <span class="list-group-item">HẠNG 2:</span>
+            <span class="list-group-item">HẠNG 3:</span>
+        </div>
+    </div>
+</div>
+{% endblock %}

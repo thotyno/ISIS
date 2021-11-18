@@ -1,0 +1,67 @@
+{% extends "pages/base.html" %}
+
+{% block title %}NAP{% endblock  %}
+{% block background %}E1E5EB{% endblock %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">
+        <img src="{% static 'icons/setting.png' %}" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      </ul>
+
+
+      <div class="form-inline my-2 my-lg-0">
+          <a href="/"><img src="{% static 'favicon/isos.ico' %}" alt=""></a>
+        {% if user.first_name %}
+            <p>{{user.first_name}}</p>
+            <p><a href="{% url 'logout' %}">Đăng xuất</a></p>
+        {% else %}
+            <p><a href="{% url 'login' %}">Đăng nhập</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+
+<div class='row'>
+    <div class='col-md-3'>
+        <div class='row border-bottom'>
+            <button class="col-3">Chung</button> <br>
+            <button class="col-3">Bảo mật và đăng nhập</button> <br>
+            <button class="col-3">Thông tin của bạn</button> <br>
+        </div>
+        <div class='row border-bottom'>
+            <button class="col-3">Quyền riêng tư</button> <br>
+            <button class="col-3">Dòng thời gian và gắn thẻ</button> <br>
+            <button class="col-3">Tin</button> <br>
+            <button class="col-3">Vị trí</button> <br>
+            <button class="col-3">Chặn</button> <br>
+            <button class="col-3">Ngôn ngữ và khu vực</button> <br>
+        </div>
+        <div class='row border-bottom'>
+            <button class="col-3">Thông báo</button> <br>
+            <button class="col-3">Di động</button> <br>
+            <button class="col-3">Bài viết công khai</button> <br>
+        </div>
+        <div class='row border-bottom'>
+            <button class="col-3">Ứng dụng và trang web</button> <br>
+            <button class="col-3">Trò chơi tức thì</button> <br>
+            <button class="col-3">Tiện ích tích hợp cho doanh nghiệp</button> <br>
+            <button class="col-3">Quảng cáo</button> <br>
+            <button class="col-3">Thanh toán</button> <br>
+            <button class="col-3">Hộp thư hỗ trợ</button> <br>
+            <button class="col-3">Video</buttonclass="col-3"> <br>
+        </div>
+    </div>
+
+    <div class='col-md-9'>
+
+    </div>
+</div>
+{% endblock %}

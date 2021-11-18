@@ -1,0 +1,70 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Chuyên môn{% endblock  %}
+{% load static %}
+{% block content %}
+    <div class="card-deck text-center">
+            <div class="card">
+              <div class="card-body" onclick="window.location.href='/chuyenmon/toanhoc'">
+                <img class="card-img-top" src="assets/icons/maths.svg" width="64px" height="64px"> <br> <br>
+                <h4 class="card-title">TOÁN HỌC</h4>
+                <p class="card-text">Công thức, bài tập.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body" onclick="window.location.href='/chuyenmon/vatly'">
+                <img class="card-img-top" src="assets/icons/physical.svg" width="64px" height="64px"> <br> <br>
+                <h4 class="card-title">VẬT LÝ</h4>
+                <p class="card-text">Công thức, bài tập.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body" onclick="window.location.href='/chuyenmon/hoahoc'">
+                <img class="card-img-top" src="assets/icons/chemistry.svg" width="64px" height="64px"> <br> <br>
+                <h4 class="card-title">HÓA HỌC</h4>
+                <p class="card-text">Công thức, bài tập.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body" onclick="window.location.href='/chuyenmon/english'">
+                <img class="card-img-top" src="assets/icons/english.svg" width="64px" height="64px"> <br> <br>
+                <h4 class="card-title">TIẾNG ANH</h4>
+                <p class="card-text">Công thức, bài tập.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body" onclick="window.location.href='/chuyenmon/sinhhoc'">
+                <img class="card-img-top" src="assets/icons/biological.svg" width="64px" height="64px"> <br> <br>
+                <h4 class="card-title">SINH HỌC</h4>
+                <p class="card-text">Công thức, bài tập.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body" onclick="window.location.href='/chuyenmon/dialy'">
+                <img class="card-img-top" src="assets/icons/geography.svg" width="64px" height="64px"> <br> <br>
+                <h4 class="card-title">ĐỊA LÝ</h4>
+                <p class="card-text">Công thức, bài tập.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body" onclick="window.location.href='/chuyenmon/gdcd'">
+                <img class="card-img-top" src="assets/icons/people.svg" width="64px" height="64px"> <br> <br>
+                <h4 class="card-title">GDCD</h4>
+                <p class="card-text">Công thức, bài tập.</p>
+              </div>
+            </div>
+          </div>
+
+
+<button>CHẤT HÓA HỌC</button>
+    <button>PHƯƠNG TRÌNH</button>
+    <button>KHÁI NIỆM CƠ BẢN</button>
+    <div class="dropdown">
+        <button onclick="dropdown_start()" class="bthdropd">VIDEO</button>
+        <div id='mydropdown' class='dropdown-content'>
+            <a href="">Chất kết tủa</a> 
+            <a href="">Chất bai hơi</a> 
+            <a href="">Khác</a> 
+        </div>
+    </div>
+{% endblock %}
